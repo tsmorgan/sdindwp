@@ -22,6 +22,7 @@
 {% from "tag/macro.njk"           import govukTag %}
 {% from "textarea/macro.njk"      import govukTextarea %}
 {% from "warning-text/macro.njk"  import govukWarningText %}
+{% from "includes/header.njk"     import govukHeaderAlt %}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -34,7 +35,7 @@
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
-  {{ govukHeader({
+  {{ govukHeaderAlt({
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
